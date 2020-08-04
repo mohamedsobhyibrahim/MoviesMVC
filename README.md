@@ -3,11 +3,11 @@ Very Simple App to know the consept of MVC
 
 # MVC Pattern
 
-Model: contains application data and business logic (the rules of the system). For example, user accounts, products you sell, a set of photos, etc. The model component has no knowledge of the interface.
+Models: Models contain the displayed data. Usually, this data is fetched from the network or a local database. Then the data is put into small, simple classes which the other components can use.
 
-View: contains everything that is visible on the screen and offers interaction to the user. For example, (activity_main.xml)
+Views: Views are what’s displayed to the user. They also handle any interaction a user may have with the screen — click listeners, for example. A view should only be responsible for displaying things and should not contain any business logic. As such, the view tends to be a lightweight component compared to a controller and typically doesn’t contain much code. In Android, the view responsibility often falls onto activities and fragments.
 
-Controller: This is the "glue" between the view and the model, which also manages the application logic. The controller reacts to the user's input and presents the data requested by the user. Where does it retrieve the data from? Yes, you guessed it: the model. 
+Controllers: Controllers are a way to connect models and views together. The controller updates the model when something happens in the view. The controller will also update the view when the model changes. Too often, the controller responsibilities are also found in activities and fragments.
 
 # Author
 
